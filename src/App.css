@@ -1,0 +1,13 @@
+body{
+   color: white;
+   background-color: #161920;
+}
+
+a:visited{
+   color:white;
+}
+
+input[type=text] {
+   color:white;
+}
+

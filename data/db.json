@@ -1,0 +1,114 @@
+{
+   "constructviews": [
+        {
+            "name":"Future Neighborhood",
+            "image": "/images/construction-1.jpg",
+            "featured":true
+
+
+        },
+        {
+            "name":"construction-2",
+            "image": "/images/construction-2.jpg"
+            
+
+
+        },
+        {
+            "name":"construction-3",
+            "image": "/images/construction-3.jpg"
+
+
+        },
+        {
+            "name":"construction-4",
+            "image": "/images/construction-4.jpg"
+
+
+        },
+        {
+            "name":"residential-u",
+            "image": "/images/residential-u.jpg"
+
+
+        }
+    ],
+
+   "coolviews": [
+    {
+        "name":"Tamolitch Blue Pool",
+        "image": "/images/blue-pool.jpg",
+        "featured":true
+
+
+    },
+    {
+        "name":"Boulder Lake",
+        "image": "/images/boulder-lake.jpg"
+        
+
+
+    },
+    {
+        "name":"Cape Cod",
+        "image": "/images/cape-cod.jpg"
+
+
+    },
+    {
+        "name":"Hidden Lake",
+        "image": "/images/forest-lake3.jpg"
+
+
+    },
+    {
+        "name":"Watchman Trail",
+        "image": "/images/trail.jpg"
+
+
+    },
+    {
+        "name":"Colorado Forest",
+        "image": "/images/colorado-forest.jpg",
+        "featured":true
+
+
+    }
+   ],
+
+"mapview": [
+    {
+        "name":"mapping-1",
+        "image": "/images/mapping-1.jpg",
+        "featured":true
+
+
+    },
+    {
+        "name":"mapping-2",
+        "image": "/images/mapping-2.jpg"
+        
+
+
+    },
+    {
+        "name":"mapping-3",
+        "image": "/images/mapping-3.jpg"
+
+
+    },
+    {
+        "name":"mapping-4",
+        "image": "/images/mapping-4.jpg"
+
+
+    },
+    {
+        "name":"mapping-5",
+        "image": "/images/mapping-5.jpg"
+
+
+    }
+]
+
+}
