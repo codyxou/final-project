@@ -1,73 +1,72 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import { useNavigate, useLocation  } from 'react-router-dom';
 
+function EditSubmitForm() {
 
-function Contact() {
+    let URL='http://localhost:3501/comments';
 
-  let URL='http://localhost:3501/comments';
-
-  const [contact, setContact] = useState({});
+ const location = useLocation();
+ //variable assigned to check on the passed state of contact component via location. if it's not available, it defaults to an empty object
+  const contact = location.state?.contact || {};
+  const [editForm, setEditForm] = useState({
+    id: contact.id || '',
+    firstName: contact.firstName || '',
+    lastName: contact.lastName || '',
+    email: contact.email || '',
+    comments: contact.comments || '',
+  });
   const navigate = useNavigate();
 
+    let handleChange = (e) => {
+        let prop = e.target.name;
+        let value = e.target.value; 
+        setEditForm((prev) => ({ ...prev, [prop]: value }));
+        console.log(e);
+      };
 
-  let handleChange = (e) => {
-    let prop = e.target.name;
-    let value = e.target.value; 
-    setContact((prev) => ({ ...prev, [prop]: value }));
-    console.log(e);
-  };
-
-
-  
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const postObject = {
-    method: 'POST',
-    body: JSON.stringify(contact),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  };
-
-  try {
-    const response = await fetch(URL, postObject);
-    if (!response.ok) {
-      throw new Error('Failed to post the data');
-    }
-    const data = await response.json();
-    //using useNavigate to redirect a user after clicking the submit button to the confirmation page and to pass the state of contact as an object to the confirmation page and pass the ID for the PUT method
-    navigate('/confirmation', { state: { contact: { ...contact, id: data.id } } });
-    console.log('Data posted', data);
-  } catch (error) {
-    console.error('Error posting data', error);
-  }
-};
-
-
+      const handleUpdate = async (e) => {
+        navigate('/confirmation', {state: { contact: editForm }});
+        console.log('Edit Form:', editForm);
+        e.preventDefault();
+        const updateObject = {
+          method: 'PUT',
+          body: JSON.stringify(editForm),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        };
+      
+        try {
+          const response = await fetch(URL + `/${editForm.id}`, updateObject);
+          if (!response.ok) {
+            throw new Error('Failed to update the data');
+          }
+          const data = await response.json();
+          setEditForm(data);
+          //console.log to check if the data was posted and what
+          console.log('Data updated', data);
+          
+        } catch (error) {
+          console.error('Error posting data', error.message);
+        }
+      };
   return (
     <div>
-      <Box
-        display="flex"
-        justifyContent="center"><h2>Contact Us</h2></Box>
-      
-      <Box
-      component="form"
-      display="flex"
-      justifyContent="center"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      
-        <div>
+    <Box
+    component="form"
+    sx={{
+      '& > :not(style)': { m: 1, width: '25ch' },
+    }}
+    noValidate
+    autoComplete="off"
+  >
+    
+      <div>
 
-            <TextField
+      <TextField
             name="firstName"
             label="Required"
             placeholder="First Name"
@@ -140,17 +139,15 @@ const handleSubmit = async (e) => {
                   },
               }}
             />
-        <Button 
-            variant="outlined" 
-            size='large' 
-            sx={{bgcolor:'white', mt:1 }}
-            onClick={handleSubmit}>Submit</Button>
-        </div>
-        </Box>
-    </div>
-    
+      <Button 
+          variant="outlined" 
+          size='large' 
+          sx={{bgcolor:'white', mt:1 }}
+          onClick={handleUpdate}>Submit</Button>
+      </div>
+      </Box>
+  </div>
   )
-
 }
 
-export default Contact
+export default EditSubmitForm

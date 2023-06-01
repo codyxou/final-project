@@ -15,6 +15,10 @@ function Portfolio() {
 
       <Link to="stunningviews">
       <h3>Stunning Views</h3>
+      <img src='./images/forest-lake3.jpg' alt="forest lake" style={{
+        width:'250px',
+        height:'auto'
+      }} />
       </Link>
 
       <Link to="communitypics">

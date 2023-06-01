@@ -7,6 +7,7 @@ import Portfolio from './Components/Portfolio.js';
 import StunningViews from './Components/StunningViews.js';
 import Construction from './Components/Construction.js';
 import Mapping from './Components/Mapping.js';
+import Confirmation from './Components/Confirmation.js';
 import AddYourOwn from './Components/AddYourOwn.js';
 import './App.css';
 
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="communitypics" element={<AddYourOwn />} />
           </Route>
           <Route path="/contact" element={<Contact />} />
+          <Route path="/confirmation" element={<Confirmation />} />
          </Routes>
       </div>
   );

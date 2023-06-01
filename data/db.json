@@ -1,114 +1,120 @@
 {
-   "constructviews": [
-        {
-            "name":"Future Neighborhood",
-            "image": "/images/construction-1.jpg",
-            "featured":true
-
-
-        },
-        {
-            "name":"construction-2",
-            "image": "/images/construction-2.jpg"
-            
-
-
-        },
-        {
-            "name":"construction-3",
-            "image": "/images/construction-3.jpg"
-
-
-        },
-        {
-            "name":"construction-4",
-            "image": "/images/construction-4.jpg"
-
-
-        },
-        {
-            "name":"residential-u",
-            "image": "/images/residential-u.jpg"
-
-
-        }
-    ],
-
-   "coolviews": [
+  "constructviews": [
     {
-        "name":"Tamolitch Blue Pool",
-        "image": "/images/blue-pool.jpg",
-        "featured":true
-
-
+      "name": "Future Neighborhood",
+      "image": "/images/construction-1.jpg",
+      "featured": true
     },
     {
-        "name":"Boulder Lake",
-        "image": "/images/boulder-lake.jpg"
-        
-
-
+      "name": "construction-2",
+      "image": "/images/construction-2.jpg"
     },
     {
-        "name":"Cape Cod",
-        "image": "/images/cape-cod.jpg"
-
-
+      "name": "construction-3",
+      "image": "/images/construction-3.jpg"
     },
     {
-        "name":"Hidden Lake",
-        "image": "/images/forest-lake3.jpg"
-
-
+      "name": "construction-4",
+      "image": "/images/construction-4.jpg"
     },
     {
-        "name":"Watchman Trail",
-        "image": "/images/trail.jpg"
-
-
-    },
-    {
-        "name":"Colorado Forest",
-        "image": "/images/colorado-forest.jpg",
-        "featured":true
-
-
+      "name": "residential-u",
+      "image": "/images/residential-u.jpg"
     }
-   ],
-
-"mapview": [
+  ],
+  "coolviews": [
     {
-        "name":"mapping-1",
-        "image": "/images/mapping-1.jpg",
-        "featured":true
-
-
+      "name": "Tamolitch Blue Pool",
+      "image": "/images/blue-pool.jpg",
+      "featured": true
     },
     {
-        "name":"mapping-2",
-        "image": "/images/mapping-2.jpg"
-        
-
-
+      "name": "Boulder Lake",
+      "image": "/images/boulder-lake.jpg"
     },
     {
-        "name":"mapping-3",
-        "image": "/images/mapping-3.jpg"
-
-
+      "name": "Cape Cod",
+      "image": "/images/cape-cod.jpg"
     },
     {
-        "name":"mapping-4",
-        "image": "/images/mapping-4.jpg"
-
-
+      "name": "Hidden Lake",
+      "image": "/images/forest-lake3.jpg"
     },
     {
-        "name":"mapping-5",
-        "image": "/images/mapping-5.jpg"
-
-
+      "name": "Watchman Trail",
+      "image": "/images/trail.jpg"
+    },
+    {
+      "name": "Colorado Forest",
+      "image": "/images/colorado-forest.jpg",
+      "featured": true
     }
-]
-
+  ],
+  "mapview": [
+    {
+      "name": "mapping-1",
+      "image": "/images/mapping-1.jpg",
+      "featured": true
+    },
+    {
+      "name": "mapping-2",
+      "image": "/images/mapping-2.jpg"
+    },
+    {
+      "name": "mapping-3",
+      "image": "/images/mapping-3.jpg"
+    },
+    {
+      "name": "mapping-4",
+      "image": "/images/mapping-4.jpg"
+    },
+    {
+      "name": "mapping-5",
+      "image": "/images/mapping-5.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "firstName": "Cody",
+      "lastName": "Xoumanivong",
+      "email": "xoumanivongco@gmail.com",
+      "comments": "Drones",
+      "id": 1
+    },
+    {
+      "firstName": "Cody",
+      "lastName": "Xoumanivong",
+      "email": "xoumanivongco@gmail.com",
+      "comments": "Drones are cool",
+      "id": 2
+    },
+    {
+      "firstName": "Cody",
+      "lastName": "Xoumanivong",
+      "email": "xoumanivongco@gmail.com",
+      "comments": "Drones!!!",
+      "id": 3
+    },
+    {
+      "firstName": "Lilly",
+      "lastName": "Bear",
+      "email": "Lilly@lilly.com",
+      "comments": "Woof",
+      "id": 4
+    },
+    {
+      "firstName": "Lilly",
+      "lastName": "Bear",
+      "email": "Lilly@lilly.com",
+      "comments": "I'm a drone fan, but also a dog",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "firstName": "Hillary",
+      "lastName": "Hahn",
+      "email": "Hahn@yopmail.com",
+      "comments": "This is my updated comment"
+    }
+  ]
 }

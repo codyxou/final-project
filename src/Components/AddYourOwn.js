@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import FormButton from './FormButton';
 
 import { Container } from '@mui/material';
-import { Form, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 
 function AddYourOwn() {
@@ -76,7 +76,7 @@ function AddYourOwn() {
         loading="lazy"
       />
       <ImageListItemBar position="below" title={item.name} />
-      {/* <ImageListItemBar position="below" title={item.residence} /> */}
+      <ImageListItemBar position="below" title={item.residence} />
       <DeleteForeverIcon onClick={() => deleteEntry(item)} />
     </ImageListItem>
   ))}

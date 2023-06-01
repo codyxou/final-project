@@ -44,7 +44,6 @@ function Construction() {
       sx={{
         // width: 500,
         // height: 450,
-        // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
         transform: 'translateZ(0)',
         overflow: 'hidden',
         scrollbarWidth:'none'
