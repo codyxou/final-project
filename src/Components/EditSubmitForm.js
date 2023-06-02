@@ -7,10 +7,11 @@ import { useNavigate, useLocation  } from 'react-router-dom';
 function EditSubmitForm() {
 
     let URL='http://localhost:3501/comments';
-
+//useLocation accesses the object that represents the active URL. In this case we are passing Contact where our first form is
  const location = useLocation();
  //variable assigned to check on the passed state of contact component via location. if it's not available, it defaults to an empty object
   const contact = location.state?.contact || {};
+  //declaring the usestate and the object values should be from the passed content component or an empty string
   const [editForm, setEditForm] = useState({
     id: contact.id || '',
     firstName: contact.firstName || '',
@@ -28,6 +29,7 @@ function EditSubmitForm() {
       };
 
       const handleUpdate = async (e) => {
+        //useNavigate first argument we are passing a To value like <Link to=, the 2nd is the state data we are sending to the confirmation page. contact:editForm is a key-value pair with key being contact and editForm the object. This allows the code to access data within our editForm key on the confirmation page 
         navigate('/confirmation', {state: { contact: editForm }});
         console.log('Edit Form:', editForm);
         e.preventDefault();

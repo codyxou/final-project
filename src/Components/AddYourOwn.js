@@ -5,7 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Box from '@mui/material/Box';
 import FormButton from './FormButton';
-
+import { Typography } from '@mui/material';
 import { Container } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
@@ -59,10 +59,11 @@ function AddYourOwn() {
 
  return (
     <div>
+      <Typography variant='h2' display={'flex'} justifyContent={'center'} sx={{m:2}}>Community Images</Typography>
         <FormButton />
-      <Container maxWidth='md'>
+      <Container maxWidth='lg'>
  
-    <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
+    <Box sx={{ width: 'auto', height: 'auto', }}>
     <ImageList 
             variant="masonry" 
             cols={2} 
@@ -75,9 +76,13 @@ function AddYourOwn() {
         alt={item.title}
         loading="lazy"
       />
-      <ImageListItemBar position="below" title={item.name} />
-      <ImageListItemBar position="below" title={item.residence} />
-      <DeleteForeverIcon onClick={() => deleteEntry(item)} />
+       <Box display="flex" justifyContent="space-between" alignItems="center" padding={1}>
+                  <div>
+                    <Typography variant="body2">{item.name},</Typography>
+                    <Typography variant="body2">{item.residence}</Typography>
+                  </div>
+                  <DeleteForeverIcon onClick={() => deleteEntry(item)} />
+                </Box>
     </ImageListItem>
   ))}
 </ImageList>

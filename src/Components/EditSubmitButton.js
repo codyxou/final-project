@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import EditSubmitForm from './EditSubmitForm';
 
+//EditSubmitButton and FormButton are components that "hide" the forms on their respective pages until the button is clicked 
+
 function EditSubmitButton() {
     const [showForm, setShowForm] = useState(false);
 

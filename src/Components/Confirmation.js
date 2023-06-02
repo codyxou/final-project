@@ -1,17 +1,17 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import { useState } from 'react';
 import EditSubmitButton from './EditSubmitButton';
 
 
 function Confirmation() {
   const url='http://localhost:3501/comments';
-//assigning location variable to the useLocation method for next step of grabbing the state contact as an object
 
+  //assigning location variable to the useLocation method for next step of grabbing the state contact as an object
   const location = useLocation();
+  //storing contact as the variable to call for the key-value pair object easier (from contact)
   const contact = location.state.contact;
 
 

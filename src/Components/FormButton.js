@@ -15,6 +15,8 @@ function FormButton() {
   return (
     <div>
     <Button variant="contained" 
+            sx={{m:2,
+                 backgroundColor:'#04AA6D'}}
             onClick={(e) => handleClick(e)}>
                 {!showForm ? "Add a Photo" : "Close Form"}
     </Button>

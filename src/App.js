@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, Link, Router } from 'react-router-dom';
-
 import Home from './Components/Home.js';
 import Contact from './Components/Contact.js';
 import Portfolio from './Components/Portfolio.js';
@@ -9,6 +8,7 @@ import Construction from './Components/Construction.js';
 import Mapping from './Components/Mapping.js';
 import Confirmation from './Components/Confirmation.js';
 import AddYourOwn from './Components/AddYourOwn.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
@@ -20,18 +20,10 @@ export default function App() {
 
       <div>
 
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
+        <nav className='topnav'>
+              <Link to="/" className='active'>Home</Link>
               <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li>
               <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
         </nav>
 
         <Routes>

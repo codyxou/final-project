@@ -5,7 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import { Container } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-
+import { Typography } from '@mui/material';
 
 function Mapping() {
 
@@ -38,6 +38,7 @@ function Mapping() {
 
   return (
     <div>
+       <Typography variant='h2' display={'flex'} justifyContent={'center'} sx={{m:2}}>Mapping</Typography>
         <Container maxWidth='md'>
        
         <ImageList

@@ -5,9 +5,11 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import { Container } from '@mui/material';
 import { Outlet } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 
 function Construction() {
+  //used a local server to host all the images on my PC for all the sublinks under portfolio
     let url = `http://localhost:3501`
     let [constructViews, setConstructViews] = useState([]);
 
@@ -38,6 +40,7 @@ function Construction() {
 
   return (
     <div>
+      <Typography variant='h2' display={'flex'} justifyContent={'center'} sx={{m:2}}>Construction</Typography>
         <Container maxWidth='md'>
        
         <ImageList

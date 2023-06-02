@@ -73,6 +73,16 @@
       "image": "/images/mapping-5.jpg"
     }
   ],
+  "compare": [
+    {
+      "name": "before",
+      "image": "/images/before.png"
+    },
+    {
+      "name": "before",
+      "image": "/images/after.png"
+    }
+  ],
   "comments": [
     {
       "firstName": "Cody",
@@ -115,6 +125,13 @@
       "lastName": "Hahn",
       "email": "Hahn@yopmail.com",
       "comments": "This is my updated comment"
+    },
+    {
+      "id": 7,
+      "firstName": "Hillary",
+      "lastName": "McGoo",
+      "email": "Hillary@yopmail.com",
+      "comments": "I would actually like to know more about Land Surveying"
     }
   ]
 }
